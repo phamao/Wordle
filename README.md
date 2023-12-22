@@ -18,7 +18,9 @@ This project was made by [Andrew Pham](https://github.com/phamao).
 
 **Solved 12/22/23:** ~~Scrape common 5 letter words~~
 
-**Added 12/22/23:**  Wordle functionality
+**Solved 12/22/23:** ~~Wordle guess functionality~~
+
+**In Progress 12/22/23:**  Track game progress and add win state
 
 ## File Hierarchy
 

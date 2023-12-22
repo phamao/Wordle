@@ -38,4 +38,4 @@ def get_words():
 
     return word_list
 
-# print(get_words())
+# print(len(get_words())) # 488 words
