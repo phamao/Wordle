@@ -14,10 +14,6 @@ To run this script, you will need the following packages:
 
 This project was made by [Andrew Pham](https://github.com/phamao).
 
-## Sources
-
-The code for `five_letter_words.py` was written by [Ian C. Ward](https://gist.github.com/iancward)
-
 ## TO DO
 
 **Solved 12/22/23:** ~~Scrape common 5 letter words~~
