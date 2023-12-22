@@ -20,7 +20,9 @@ This project was made by [Andrew Pham](https://github.com/phamao).
 
 **Solved 12/22/23:** ~~Wordle guess functionality~~
 
-**In Progress 12/22/23:**  Track game progress and add win state
+**Solved 12/22/23:**  ~~Track game progress and add win state~~
+
+**Added 12/22/23:** Edge cases
 
 ## File Hierarchy
 

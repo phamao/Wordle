@@ -27,7 +27,7 @@ def run_wordle(word_list):
     # Contains letters in order
     in_order = ['', '', '', '', '']
 
-    # Tracks if the player won or not
+    # Win state
     win = False
 
     # Prompts 6 guesses
@@ -53,6 +53,10 @@ def run_wordle(word_list):
                 in_order[guess.index(letter)] = letter
                 print(Fore.GREEN + letter, end='')
 
+                # If the ordered letter is found in wrong_order, remove it
+                if letter in wrong_order:
+                    wrong_order.remove(letter)
+
             # If the letter is in the word but NOT at the same index, print it yellow and add it to wrong_order
             elif letter in word and guess.index(letter) != word.index(letter):
                 wrong_order.append(letter)
@@ -62,6 +66,29 @@ def run_wordle(word_list):
             elif letter not in word:
                 wrong_letters.append(letter)
                 print(Fore.RESET + letter, end='')
+
+            # Removes the letter from unused_letters
+            try:
+                unused_letters.remove(letter)
+            except:
+                continue
+
+        # print(in_order) #debug
+
+        # If in_order has no more blank slots, the player has won
+        if '' not in in_order:
+            print(Fore.RESET + '\nYOU WON!\n')
+            win = True
+            break
+
+        
+        print(Fore.RESET + '\nUnused Letters: {unused}'.format(unused=unused_letters))
+        print(Fore.RESET + 'Out of Order Letters: {unordered}'.format(unordered=list(set(wrong_order))))
+        print(Fore.RESET + 'Correct Letters: {correct}\n'.format(correct=in_order))
+
+    # If the player ran out of guesses and failed to guess, they lost
+    if not win:
+        print(Fore.RESET + '\nYou lost :(\n')
 
     # Resets text to default color
     print(Fore.RESET)
